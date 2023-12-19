@@ -25,3 +25,11 @@ https://dev-in-seoul.tistory.com/27
 yarn add react-native-svg
 yarn add --dev react-native-svg-transformer
 ```
+
+3. redux for react native
+
+```
+yarn add @reduxjs/toolkit react-redux redux --save
+```
+
+명령어는 Redux Toolkit과 React-Redux, 그리고 Redux 자체를 프로젝트에 추가합니다.

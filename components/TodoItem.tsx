@@ -1,22 +1,47 @@
-import {Pressable, StyleSheet, View} from 'react-native';
 import React from 'react';
+import {Pressable, View, StyleSheet} from 'react-native';
 import {Div, Text} from 'react-native-magnus';
 import Checkboxunchecked from '../assets/checkbox-un.svg';
 import Checkboxchecked from '../assets/checkbox-ch.svg';
-import DeleteIcon from '../assets/delete.svg'; // 이름 수정 및 대문자로 시작
+import DeleteIcon from '../assets/delete.svg';
+import {useDispatch} from 'react-redux';
+import {removeTodo, toggleTodo} from '../redux/slices/todoSlice';
 
-const TodoItem = () => {
+const TodoItem = ({todo}: any) => {
+  const dispatch = useDispatch();
+
+  const handleRemoveTodo = () => {
+    dispatch(removeTodo(todo.id));
+  };
+
+  const handletoggleTodo = () => {
+    todo.done = !todo.done;
+    dispatch(toggleTodo(todo.id));
+  };
+
+  const completedTodoStyle = StyleSheet.create({
+    text: {
+      textDecorationLine: todo.done ? 'line-through' : 'none',
+      opacity: todo.done ? 0.3 : 1,
+    },
+  });
+
   return (
     <View>
-      <Div row>
-        <Pressable>
-          <Checkboxunchecked width={24} height={24} />
-          <Checkboxchecked width={24} height={24} />
+      <Div row borderWidth={1} alignItems="center" p="sm">
+        <Pressable onPress={handletoggleTodo}>
+          {todo.done ? (
+            <Checkboxchecked width={24} height={24} />
+          ) : (
+            <Checkboxunchecked width={24} height={24} />
+          )}
         </Pressable>
 
-        <Text flex={2}>코딩하기</Text>
+        <Text flex={2} style={completedTodoStyle.text}>
+          {todo.text}
+        </Text>
 
-        <Pressable hitSlop={10}>
+        <Pressable hitSlop={10} onPress={handleRemoveTodo}>
           <DeleteIcon width={24} height={24} />
         </Pressable>
       </Div>
@@ -25,5 +50,3 @@ const TodoItem = () => {
 };
 
 export default TodoItem;
-
-const styles = StyleSheet.create({});
