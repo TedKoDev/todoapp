@@ -33,3 +33,16 @@ yarn add @reduxjs/toolkit react-redux redux --save
 ```
 
 명령어는 Redux Toolkit과 React-Redux, 그리고 Redux 자체를 프로젝트에 추가합니다.
+
+4. react native navigation 관련
+
+```
+ yarn add @react-navigation/native                                                ✔  07:04:53 PM 
+yarn add react-native-screens react-native-safe-area-context
+yarn add @react-navigation/native-stack
+yarn add @react-navigation/bottom-tabs
+yarn add @react-navigation/drawer
+yarn add @react-navigation/material-top-tabs
+yarn add react-native-gesture-handler react-native-reanimated @react-native-community/masked-view
+
+```
