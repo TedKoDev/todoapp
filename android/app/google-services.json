@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "649358865095",
+    "project_id": "rntodoapp-157ed",
+    "storage_bucket": "rntodoapp-157ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:649358865095:android:61291e2d2b8f968abfc4e2",
+        "android_client_info": {
+          "package_name": "com.todoapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr85mzFPkhCeZ6kmuRdkA7W-TaLaJsUWk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

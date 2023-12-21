@@ -46,3 +46,22 @@ yarn add @react-navigation/material-top-tabs
 yarn add react-native-gesture-handler react-native-reanimated @react-native-community/masked-view
 
 ```
+
+5. firebase 관련
+
+```
+1. android  app 폴더에 google-services.json 파일 추가
+2. build.gradle dependencies 추가
+ classpath 'com.google.gms:google-services:4.3.10'
+
+3. app/build.gradle 맨 위에 추가
+apply plugin: 'com.google.gms.google-services'
+defaultConfig 에  multiDexEnabled true 추가
+dependencies 에  implementation platform('com.google.firebase:firebase-bom:29.1.0') 추가
+
+
+다음 후 콘솔로 이동하기전에
+yarn add @react-native-firebase/app @react-native-firebase/auth @react-native-firebase/firestore
+
+ 각각 파이어베이스 접근, 인증, 데이터베이스 추가 기능 설치
+```

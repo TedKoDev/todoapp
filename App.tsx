@@ -16,13 +16,13 @@ const App = () => {
         <Stack.Navigator>
           <Stack.Screen
             options={{headerShown: false}}
-            name="MainScreen"
-            component={MainScreen}
+            name="LoginScreen"
+            component={LoginScreen}
           />
           <Stack.Screen
             options={{headerShown: false}}
-            name="LoginScreen"
-            component={LoginScreen}
+            name="MainScreen"
+            component={MainScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>
